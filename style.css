@@ -1,75 +1,89 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Helvetica Neue", sans-serif;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #126aa5;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .container {
-    background: #000000;
-    padding: 25px;
-    width: 350px;
-    border-radius: 10px;
-  }
-  .calc-text {
-    margin-bottom: 20px;
-    padding-left: 10px;
-  }
-  
-  .calc-text p {
-    width: 100%;
-    font-size: 3.5rem;
-    text-align: end;
-    background: transparent;
-    color: #fff;
-    border: none;
-    outline: none;
-    word-wrap: break-word;
-    word-break: break-all;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
 
-  button {
-    background: #333333;
-    color: #fff;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: 70%;
-    cursor: pointer;
-    height: 65px;
-    width: 65px;
-  }
-  
-  button:active,
-  button:focus {
-    filter: brightness(120%);
-  }
-  
-  .calc-keys {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: 15px;
-    grid-column-gap: 10px;
-  }
-  
-  .key-zero {
-    grid-column: span 2;
-    width: 100%;
-    border-radius: 30px;
-  }
-  
-  .key-operate {
-    background: #0b15d5;
-  }
-  
-  .key-others {
-    background: #a6a6a6;
-    color: #000000;
-  }
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #7edffd;
+}
+
+.calculator {
+  max-width: 375px;
+	min-height: 640px;
+  background: #22252D;
+  width: 100%;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.display {
+  min-height: 200px;
+  padding: 1.5rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: white;
+  text-align: right;
+  flex: 1 1 0%;
+}
+
+.display .content {
+	width: 100%;
+  font-size: 3.5rem;
+  text-align: end;
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.display .input {
+	width: 100%;
+	font-size: 1.60rem;
+	margin-bottom: 0.5rem;
+}
+
+.display .output {
+	font-size: 3rem;
+	font-weight: 700;
+	width: 100%;
+	white-space: nowrap;
+}
+
+.display .operator {
+	color: #EB6666;
+}
+
+button {
+  background: #333333;
+  color: #fff;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 70%;
+  cursor: pointer;
+  height: 65px;
+  width: 65px;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 15px;
+  grid-column-gap: 10px;
+}
+
+
+.key-operator {
+  color: #EB6666;
+}
+
+.key-action {
+	color: #00ffd9;
+}
